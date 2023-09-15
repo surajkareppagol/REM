@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: "Ubuntu", sans-serif;
+  box-sizing: border-box;
+
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(16, 15, 15, 1),
+    rgba(0, 0, 0, 1)
+  );
+
+  color: #fbf5f3;
+  padding: 2rem 4rem;
+  text-transform: capitalize;
+}
+
+/* NAVIGATION */
+
+.nav-container {
+  margin-bottom: 2rem;
+}
+
+.nav {
+  max-width: 120rem;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 1.2rem;
+}
+
+.nav__links {
+  color: #fbf5f3;
+  font-size: 1.6rem;
+  border-radius: 2px;
+  padding: 0 0.2rem;
+}
+
+/* TEXT CONTAINER */
+
+.section-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+  gap: 1rem;
+
+  margin-bottom: 4rem;
+}
+
+.section-text-head-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-text__main {
+  font-size: 3rem;
+}
+
+.section-text__sub {
+  font-size: 1.8rem;
+}
+
+.span-html {
+  color: #ffa400;
+}
+
+.icon-md {
+  width: 48px;
+  height: 48px;
+  color: #fbf5f3;
+}
+
+/* IMAGE CONTAINER */
+
+.section-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  margin-bottom: 4rem;
+}
+
+img {
+  display: block;
+  border: 2px dashed #fbf5f3;
+  max-width: 46%;
+
+  padding: 0.4rem;
+}
+
+.icon-arrow {
+  color: #fbf5f3;
+  width: 52px;
+  height: 52px;
+}
+
+/* FORM CONTAINER */
+
+.form-container {
+  margin-bottom: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.form-text {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  margin-bottom: 0.4rem;
+}
+
+.upload-text {
+  margin-top: 0.4rem;
+}
+
+input {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  font-size: 2rem;
+  background-color: #fbf5f3;
+  color: #000;
+  border-radius: 55px;
+  padding: 0.2rem 2rem;
+}
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+}
+
+.footer__text {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.span-author {
+  color: #7bc950;
+}
+
+.contribute-text {
+  margin-bottom: 0;
+}
+
+.footer__link {
+  color: #fbf5f3;
+  border-radius: 2px;
+  padding: 0 0.2rem;
+}

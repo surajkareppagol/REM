@@ -17,8 +17,8 @@ body {
   height: 100vh;
 
   background-image: linear-gradient(
-    to top right,
-    rgba(16, 15, 15, 1),
+    to bottom right,
+    rgba(16, 15, 15, 1) 60%,
     rgba(0, 0, 0, 0.9)
   );
 
@@ -101,4 +101,17 @@ a {
 
 blockquote {
   font-size: 1rem;
+  position: relative;
+}
+
+/* blockquote::before {
+    content: ">";
+    display: block;
+    position: absolute;
+  } */
+
+img {
+  display: block;
+  max-width: 10%;
+  background-color: #fff;
 }

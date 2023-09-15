@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>REM &mdash; Render Markdown</title>
+  </head>
+  <body>
+    <div class="nav-container">
+      <nav class="nav">
+        <a href="#" class="nav__links">Home</a>
+        <a href="#" class="nav__links">Upload</a>
+        <a href="#" class="nav__links">About REM</a>
+      </nav>
+    </div>
+
+    <section class="section">
+      <div class="section-conatiner">
+        <div class="section-text-container">
+          <div class="section-text-head-container">
+            <p class="section-text__main">REM &mdash; Render Markdown</p>
+            <ion-icon class="icon icon-md" name="logo-markdown"></ion-icon>
+          </div>
+
+          <p class="section-text__sub">
+            REM produces <span class="span-html">HTML</span> by parsing markdown
+            files.
+          </p>
+        </div>
+
+        <div class="section-image-container">
+          <img src="../assets/md.png" alt="markdown file image" />
+
+          <ion-icon name="arrow-forward-outline" class="icon-arrow"></ion-icon>
+
+          <img src="../assets/html.png" alt="html file image" />
+        </div>
+
+        <div class="form-container">
+          <div>
+            <p class="form-text">
+              Want to look at an elegant version of your markdown?
+            </p>
+            <p class="form-text upload-text">
+              then Upload your markdown file now 👉
+            </p>
+          </div>
+
+          <form action="#">
+            <label for="file">
+              Upload
+              <input type="file" name="file" id="file" />
+            </label>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="footer__text">
+        Designed and created by <span class="span-author">Suraj</span>.
+      </p>
+
+      <p class="footer__text contribute-text">
+        Contribute on
+        <a href="https://github.com/surajkareppagol/rem" class="footer__link"
+          >github.</a
+        >
+      </p>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
