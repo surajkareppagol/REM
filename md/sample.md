@@ -1,35 +1,31 @@
-# This is a test markdown file
-
 Markdown is a lightweight markup language for creating formatted text using a plain-text editor.
 
-## History
+# Heading Level 1
 
-Markdown was inspired by pre-existing conventions for marking up plain text in email.
+## Heading Level 2
 
-## Some styles
+### Heading Level 3
+
+#### Heading Level 4
+
+##### Heading Level 5
+
+###### Heading Level 6
 
 _ITALICS_
 
 **BOLD STYLE**
 
-### BlockQuotes
-
 > This is a blockquote.
 
-#### Code Fences
-
-`This is a c code.`
+`Markdown`
 
 ```python
 print("Hello World!");
 ```
 
-##### Links
+[Check Out Markdown cheet sheet.](https://www.markdownguide.org/cheat-sheet/)
 
-[Link](http://link.com)
-
-###### Images
-
-[Image](http://image.com)
+![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/1024px-Markdown-mark.svg.png)
 
 ---
