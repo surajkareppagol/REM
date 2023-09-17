@@ -7,14 +7,6 @@
     <title>REM &mdash; Render Markdown</title>
   </head>
   <body>
-    <div class="nav-container">
-      <nav class="nav">
-        <a href="#" class="nav__links">Home</a>
-        <a href="#" class="nav__links">Upload</a>
-        <a href="#" class="nav__links">About REM</a>
-      </nav>
-    </div>
-
     <section class="section">
       <div class="section-conatiner">
         <div class="section-text-container">
@@ -48,10 +40,13 @@
           </div>
 
           <form action="#">
-            <label for="file">
-              Upload
-              <input type="file" name="file" id="file" />
-            </label>
+            <div>
+              <label for="file"
+                >📁
+                <input type="file" name="file" id="file" />
+              </label>
+            </div>
+            <button class="form__button">Upload</button>
           </form>
         </div>
       </div>

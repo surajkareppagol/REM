@@ -1,5 +1,6 @@
-const mongoose = require("mongoose");
+/* SERVER */
 
+const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 
 /* READ ENV VARIABLES */

@@ -7,12 +7,6 @@ html(lang="en")
     title REM &mdash; Render Markdown
 
   body
-    div.nav-container
-      nav.nav
-        a.nav__links(href="#") Home
-        a.nav__links(href="#") Upload
-        a.nav__links(href="#") About REM
-
     section.section
       div.section-container
         div.section-text-container
@@ -30,11 +24,12 @@ html(lang="en")
         div.form-container
           div
             p.form-text Want to look at an elegant version of your markdown?
-            p.form-text upload-text then Upload your markdown file now 👉
+            p.form-text.upload-text then Upload your markdown file now 👉
 
-          form(action="#")
-            label(for="file") Upload
+          form(action="upload" method="post" enctype="multipart/form-data")
+            label(for="file") 📁 
               input(type="file" name="file" id="file")
+            button.form__button Upload
 
     footer.footer
       p.footer__text  Designed and created by #[span.span-author Suraj].

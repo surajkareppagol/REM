@@ -1,27 +1,29 @@
+/* PARSER */
+
+/* NOTES - Clear all variable at end. */
+
 const fs = require("fs");
 const readline = require("readline");
 
-const tags = [];
-
-/* For Code Fence */
+/* FOR CODE FENCE */
 let isCodeFence = false;
 let codeFence = "";
 
 function getHTML(line) {
   let characters, symbol;
 
-  /* Heading */
+  /* HEADING */
   if (line.includes("#")) {
     characters = line.split("#").length - 1;
     return `<h${characters}>${line.slice(characters + 1)}</h${characters}>`;
   }
 
-  /* Code */
+  /* CODE */
   if (line.includes("`") && line.split("`").length - 1 == 2) {
     return `<span>${line.slice(1, -1)}</span>`;
   }
 
-  /* Bold, Italics */
+  /* BOLD, ITALICS */
   if (line && (line.includes("*") || line.includes("_"))) {
     if (line.includes("*")) symbol = "*";
     if (line.includes("_")) symbol = "_";
@@ -35,12 +37,12 @@ function getHTML(line) {
       return `<p><strong><em>${line.slice(3, -3)}</em></strong></p>`;
   }
 
-  /* Blockquotes */
+  /* BLOCKQUOTE */
   if (line && line.includes(">")) {
     return `<blockquote>${line.slice(2)}</blockquote>`;
   }
 
-  /* Code Fence */
+  /* CODE FENCE */
   if (line && line.includes("```")) {
     if (!isCodeFence) {
       isCodeFence = true;
@@ -54,12 +56,12 @@ function getHTML(line) {
     }
   }
 
-  /* Horizontal Line */
+  /* HORIZONTAL RULE */
   if (line && (line.includes("---") || line.includes("***"))) {
     return `<hr/>`;
   }
 
-  /* Links */
+  /* LINKS */
   if (line && line.includes("[") && line.includes("]") && !line.includes("!")) {
     return `<a href="${line.slice(
       line.indexOf("(") + 1,
@@ -67,7 +69,7 @@ function getHTML(line) {
     )}">${line.slice(line.indexOf("[") + 1, line.indexOf("]"))}</a>`;
   }
 
-  /* Images */
+  /* IMAGES */
   if (line && line.includes("[") && line.includes("]") && line.includes("!")) {
     return `<img src="${line.slice(
       line.indexOf("(") + 1,
@@ -75,7 +77,7 @@ function getHTML(line) {
     )}" alt="${line.slice(line.indexOf("[") + 1, line.indexOf("]"))}"/>`;
   }
 
-  /* Paragraph And Code Fence */
+  /* PARAGRAPH AND CODE FENCE */
   if (line) {
     if (isCodeFence) {
       codeFence += `${line}\n`;
@@ -85,7 +87,7 @@ function getHTML(line) {
     return `<p>${line}</p>`;
   }
 
-  /* Line Break Or Blank Line */
+  /* LINE BREAK AND BLANK LINE */
   if (!line) {
     return;
   }
@@ -93,6 +95,7 @@ function getHTML(line) {
 
 async function ParserMD(mdPath) {
   try {
+    const tags = [];
     const readLine = readline.createInterface({
       input: fs.createReadStream(mdPath),
       crlfDelay: Infinity,
@@ -102,9 +105,10 @@ async function ParserMD(mdPath) {
       tags.push(getHTML(line));
     }
 
+    codeFence = "";
     return tags;
   } catch (error) {
-    console.log(`Something Went Wrong: Error ${error}`);
+    console.log(`Something Went Wrong (Parser) : Error ${error}`);
   }
 }
 

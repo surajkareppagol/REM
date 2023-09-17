@@ -1,8 +1,13 @@
+/* INSERT */
+
+/* NOTES - Clear all variable at end. */
+
 const fs = require("fs");
 const readline = require("readline");
-const path = require("path");
 
-/* HTML File */
+const basePath = `/${__dirname.split("/").slice(1, -1).join("/")}`;
+
+/* HTML FILE */
 let html = "";
 
 function insertIntoHTML(line, tags) {
@@ -17,10 +22,10 @@ function insertIntoHTML(line, tags) {
 
 async function InsertMD(tags) {
   try {
+    html = "";
+
     const readLine = readline.createInterface({
-      input: fs.createReadStream(
-        path.join(__dirname, "../public/template.txt")
-      ),
+      input: fs.createReadStream(`/${basePath}/public/txt/template.txt`),
       crlfDelay: Infinity,
     });
 
@@ -28,13 +33,15 @@ async function InsertMD(tags) {
       insertIntoHTML(line, tags);
     }
 
-    fs.writeFile(path.join(__dirname, "../public/rem.html"), html, (error) => {
+    fs.writeFile(`/${basePath}/public/html/rem.html`, html, (error) => {
       if (error) {
         console.error(error);
       }
     });
+
+    return `/${basePath}/public/html/rem.html`;
   } catch (error) {
-    console.log(`Something Went Wrong: Error ${error}`);
+    console.log(`Something Went Wrong (Insert) : Error ${error}`);
   }
 }
 
