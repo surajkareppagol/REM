@@ -4,6 +4,6 @@ REM is a markdown renderer, an approach to provide a good and elegant look for t
 
 ## Results
 
-![Markdown](./assets/md.png)
+![Markdown](public/img/md.png)
 
-![HTML](./assets/html.png)
+![HTML](public/img/html.png)
