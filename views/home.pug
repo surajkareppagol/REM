@@ -1,0 +1,44 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="../css/style.css")
+    title REM &mdash; Render Markdown
+
+  body
+    div.nav-container
+      nav.nav
+        a.nav__links(href="#") Home
+        a.nav__links(href="#") Upload
+        a.nav__links(href="#") About REM
+
+    section.section
+      div.section-container
+        div.section-text-container
+          div.section-text-head-container
+            p.section-text__main REM &mdash; Render Markdown
+            ion-icon.icon.icon-md(name="logo-markdown")
+
+          p.section-text__sub REM produces #[span.span-html HTML] by parsing markdown files.
+
+        div.section-image-container
+          img(src="../img/md.png" alt="markdown file image")
+          ion-icon.icon-arrow(name="arrow-forward-outline")
+          img(src="../img/html.png" alt="html file image")
+
+        div.form-container
+          div
+            p.form-text Want to look at an elegant version of your markdown?
+            p.form-text upload-text then Upload your markdown file now 👉
+
+          form(action="#")
+            label(for="file") Upload
+              input(type="file" name="file" id="file")
+
+    footer.footer
+      p.footer__text  Designed and created by #[span.span-author Suraj].
+      p.footer__text.contribute-text Contribute on #[a.footer__link(href="https://github.com/surajkareppagol/rem") github].
+
+    script(type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js")
+    script(nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js")
