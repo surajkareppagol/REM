@@ -1,0 +1,35 @@
+.icon {
+  color: $white-variant;
+}
+
+.icon-md {
+  width: 48px;
+  height: 48px;
+}
+
+.icon-arrow {
+  width: 52px;
+  height: 52px;
+}
+
+.rem-emoji-arrow {
+  cursor: pointer;
+
+  font-size: 2rem;
+  text-decoration: none;
+
+  position: absolute;
+
+  padding: 1rem;
+
+  border-radius: 55px;
+
+  transition: all 0.2s;
+
+  top: 4%;
+  left: 4%;
+
+  &:hover {
+    background-color: $white-variant;
+  }
+}

@@ -1,0 +1,40 @@
+.center-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+  gap: 2rem;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+  }
+
+  &__text {
+    &--head {
+      font-size: 4rem;
+    }
+
+    &--sub {
+      font-size: 3rem;
+    }
+  }
+
+  &__link {
+    cursor: pointer;
+    font-size: 4rem;
+    padding: 1rem;
+    border-radius: 55px;
+    text-decoration: none;
+
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: $white-variant;
+    }
+  }
+}

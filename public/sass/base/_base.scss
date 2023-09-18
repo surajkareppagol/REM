@@ -7,7 +7,10 @@
 body {
   font-size: 62.5%;
   font-family: "Ubuntu", sans-serif;
-  box-sizing: border-box;
+  text-transform: capitalize;
+  color: $white-variant;
+
+  height: 100vh;
 
   background-image: linear-gradient(
     to bottom right,
@@ -15,20 +18,11 @@ body {
     rgba(0, 0, 0, 1)
   );
 
-  color: #fbf5f3;
   padding: 2rem 4rem;
-  text-transform: capitalize;
 
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  text-transform: capitalize;
 
-  height: 100vh;
-}
-
-.center-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  box-sizing: border-box;
 }

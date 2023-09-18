@@ -1,6 +1,6 @@
 /* IMAGE CONTAINER */
 
-.section-image-container {
+.img-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,16 +9,10 @@
   margin-bottom: 4rem;
 }
 
-img {
+.img {
   display: block;
-  border: 2px dashed #fbf5f3;
+  border: 2px dashed $white-variant;
   max-width: 46%;
 
   padding: 0.4rem;
-}
-
-.icon-arrow {
-  color: #fbf5f3;
-  width: 52px;
-  height: 52px;
 }

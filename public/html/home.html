@@ -7,43 +7,56 @@
     <title>REM &mdash; Render Markdown</title>
   </head>
   <body>
-    <section class="section">
+    <section class="section u-mg-top-lg">
       <div class="section-conatiner">
-        <div class="section-text-container">
-          <div class="section-text-head-container">
-            <p class="section-text__main">REM &mdash; Render Markdown</p>
+        <div class="text-container">
+          <div class="text-container__head">
+            <p class="text-container__text--main">
+              REM &mdash; Render Markdown
+            </p>
             <ion-icon class="icon icon-md" name="logo-markdown"></ion-icon>
           </div>
 
-          <p class="section-text__sub">
-            REM produces <span class="span-html">HTML</span> by parsing markdown
-            files.
+          <p class="text-container__text--sub">
+            REM produces <span class="text-container__span">HTML</span> by
+            parsing markdown files.
           </p>
         </div>
 
-        <div class="section-image-container">
-          <img src="../img/md.png" alt="markdown file image" />
+        <div class="img-container">
+          <img
+            class="img img__md"
+            src="../img/md.png"
+            alt="markdown file image"
+          />
 
-          <ion-icon name="arrow-forward-outline" class="icon-arrow"></ion-icon>
+          <ion-icon
+            name="arrow-forward-outline"
+            class="icon icon-arrow"
+          ></ion-icon>
 
-          <img src="../img/html.png" alt="html file image" />
+          <img
+            class="img img__html"
+            src="../img/html.png"
+            alt="html file image"
+          />
         </div>
 
         <div class="form-container">
           <div>
-            <p class="form-text">
+            <p class="form__text">
               Want to look at an elegant version of your markdown?
             </p>
-            <p class="form-text upload-text">
+            <p class="form__text u-mg-top-sm">
               then Upload your markdown file now 👉
             </p>
           </div>
 
-          <form action="#">
-            <div>
-              <label for="file"
+          <form action="#" class="form">
+            <div class="form-block">
+              <label class="form__label" for="file"
                 >📁
-                <input type="file" name="file" id="file" />
+                <input class="form__input" type="file" name="file" id="file" />
               </label>
             </div>
             <button class="form__button">Upload</button>
@@ -54,10 +67,10 @@
 
     <footer class="footer">
       <p class="footer__text">
-        Designed and created by <span class="span-author">Suraj</span>.
+        Designed and created by <span class="footer__span--author">Suraj</span>.
       </p>
 
-      <p class="footer__text contribute-text">
+      <p class="footer__text u-mg-bt-zero">
         Contribute on
         <a href="https://github.com/surajkareppagol/rem" class="footer__link"
           >github.</a

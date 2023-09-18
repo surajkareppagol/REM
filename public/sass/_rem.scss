@@ -1,0 +1,100 @@
+*[class^="rem-"] {
+  margin-bottom: 0.6rem;
+}
+
+.rem-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.rem-container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.rem-h1 {
+  font-size: 2rem;
+}
+
+.rem-h2 {
+  font-size: 1.6rem;
+}
+
+.rem-h3 {
+  font-size: 1.4rem;
+}
+
+.rem-h4 {
+  font-size: 1.2rem;
+}
+
+.rem-h5 {
+  font-size: 1rem;
+}
+
+.rem-h6 {
+  font-size: 0.8rem;
+}
+
+.rem-h1,
+.rem-h2,
+.rem-h3,
+.rem-h4,
+.rem-h5,
+.rem-h6 {
+  text-transform: capitalize;
+}
+
+.rem-p {
+  font-size: 1rem;
+}
+
+.rem-code {
+  font-size: 1rem;
+  color: $white;
+
+  display: block;
+  background-color: $black-code;
+
+  padding: 0.8rem 1rem;
+
+  border-radius: 4px;
+}
+
+.rem-span {
+  font-size: 1rem;
+  color: $purple-span;
+  font-weight: 500;
+  text-shadow: 0px 0px 1px $purple-span;
+
+  display: block;
+}
+
+.rme-a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: $blue-a;
+
+  display: inline-block;
+}
+
+.rem-blockquote {
+  font-size: 1rem;
+  position: relative;
+}
+
+/* blockquote::before {
+    content: ">";
+    display: block;
+    position: absolute;
+  } */
+
+.rem-img {
+  background-color: $white;
+  max-width: 10%;
+
+  display: block;
+}
