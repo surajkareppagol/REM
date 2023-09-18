@@ -118,6 +118,14 @@ async function ParserMD(mdPath) {
     }
 
     codeFence = "";
+
+    /* DELETE FILE */
+
+    fs.unlink(mdPath, (error) => {
+      if (error)
+        console.log(`Something Went Wrong (Delete File) : Error ${error}`);
+    });
+
     return tags;
   } catch (error) {
     console.log(`Something Went Wrong (Parser) : Error ${error}`);

@@ -5,11 +5,7 @@ const formidable = require("formidable");
 
 const fs = require("fs");
 const markdownToHTML = require("../util/rem");
-
-const remHTMLPath = `/${__dirname
-  .split("/")
-  .slice(1, -1)
-  .join("/")}/public/html/rem.html`;
+let html = "";
 
 exports.getHome = (req, res) => {
   return res.status(200).render("home");
@@ -25,13 +21,15 @@ exports.uploadAndParseMD = (req, res, next) => {
     const newPath = `/${__dirname
       .split("/")
       .slice(1, -1)
-      .join("/")}/public/txt/${files.file[0].originalFilename}`;
+      .join("/")}/public/md/${Date.now()}-${files.file[0].newFilename}-${
+      files.file[0].originalFilename
+    }`;
 
     fs.rename(oldPath, newPath, (error) => {
       if (error) throw error;
     });
 
-    await markdownToHTML(newPath);
+    html = await markdownToHTML(newPath);
 
     return res.status(200).render("success");
   });
@@ -40,7 +38,7 @@ exports.uploadAndParseMD = (req, res, next) => {
 /* RENDER PARSED MD */
 
 exports.renderMD = (req, res) => {
-  return res.status(200).sendFile(remHTMLPath);
+  return res.status(200).type("text/html").send(html);
 };
 
 /* RENDER ERROR PAGE */

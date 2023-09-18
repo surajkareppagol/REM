@@ -25,7 +25,7 @@ async function InsertMD(tags) {
     html = "";
 
     const readLine = readline.createInterface({
-      input: fs.createReadStream(`/${basePath}/public/txt/template.txt`),
+      input: fs.createReadStream(`${basePath}/public/template/template.txt`),
       crlfDelay: Infinity,
     });
 
@@ -33,13 +33,7 @@ async function InsertMD(tags) {
       insertIntoHTML(line, tags);
     }
 
-    fs.writeFile(`/${basePath}/public/html/rem.html`, html, (error) => {
-      if (error) {
-        console.error(error);
-      }
-    });
-
-    return `/${basePath}/public/html/rem.html`;
+    return html;
   } catch (error) {
     console.log(`Something Went Wrong (Insert) : Error ${error}`);
   }
