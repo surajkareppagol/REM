@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 297 210"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="favicon.svg"
+   inkscape:export-filename="/home/suraj/Documents/2_github/rem/public/img/favicon.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.36913791"
+     inkscape:cx="390.0981"
+     inkscape:cy="406.35219"
+     inkscape:window-width="1366"
+     inkscape:window-height="736"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       d="M 256.34413,10.451722 H 40.655885 c -10.055604,0 -18.220258,8.558576 -18.220258,19.091868 v 150.8931 c 0,10.53823 8.164654,19.11159 18.220258,19.11159 H 256.34413 c 10.03588,0 18.22024,-8.57336 18.22024,-19.11159 V 29.54359 c 0,-10.533292 -8.16467,-19.091868 -18.22024,-19.091868 z M 164.25809,160.15311 h -31.51613 v -55.1531 l -23.63704,31.51605 -23.637094,-31.51605 v 55.1531 H 53.951768 V 49.846834 h 31.516058 l 23.637094,39.395104 23.63704,-39.395104 h 31.51613 z m 47.27408,0 -39.39506,-55.1531 h 23.66164 l -0.0216,-55.153176 h 31.5161 v 55.153176 h 23.63713 z"
+       id="path2"
+       style="fill:#ffffff;stroke:#000000;stroke-width:5.80181;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  </g>
+</svg>

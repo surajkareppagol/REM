@@ -1,19 +1,19 @@
 /* FORM CONTAINER */
 
+.form-container {
+  margin-bottom: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
 .form {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
-
-  &__container {
-    margin-bottom: 2rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4rem;
-  }
 
   &__text {
     font-size: 1.2rem;
