@@ -7,6 +7,11 @@
   align-items: center;
   justify-content: center;
   gap: 4rem;
+
+  @include respond(phone-sm) {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
 
 .form {
@@ -31,6 +36,22 @@
 
     &:hover {
       background-color: $white-variant;
+    }
+  }
+
+  &__emoji {
+    &--right {
+      @include respond(phone-sm) {
+        display: none;
+      }
+    }
+
+    &--down {
+      display: none;
+
+      @include respond(phone-sm) {
+        display: inline-block;
+      }
     }
   }
 

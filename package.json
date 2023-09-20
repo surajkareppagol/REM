@@ -6,7 +6,7 @@
   "scripts": {
     "start": "clear && nodemon server.js",
     "live:server": "live-server",
-    "compile-watch:css": "node-sass public/saas/main.scss public/css/style.css --watch",
+    "compile-watch:css": "node-sass public/sass/main.scss public/css/style.css --watch",
     "watch:css": "npm-run-all --parallel live:server compile-watch:css",
     "compile:css": "node-sass public/sass/main.scss public/css/style.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' public/css/style.css",

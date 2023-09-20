@@ -7,7 +7,7 @@ html(lang="en")
     link(rel="icon" type="image/svg" href="../img/favicon.svg")
     title REM &mdash; Render Markdown
 
-  body
+  body.u-height-100-vh
     section.section.u-mg-top-lg
       div.section-container
         div.text-container
@@ -25,7 +25,7 @@ html(lang="en")
         div.form-container
           div
             p.form__text Want to look at an elegant version of your markdown?
-            p.form__text.u-mg-top-sm then Upload your markdown file now 👉
+            p.form__text.u-mg-top-sm then Upload your markdown file now #[span.form__emoji--right 👉] #[span.form__emoji--down 👇]
 
           form.form(action="upload" method="post" enctype="multipart/form-data")
             div.form-block

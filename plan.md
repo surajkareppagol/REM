@@ -18,73 +18,79 @@ So read each line in a file, check for any symbols that matches with that of use
 
 ## Markdown Syntax
 
-- Heading
+### Heading
 
-  - #, h1
-  - ##, h2
-  - ###, h3
-  - ####, h4
-  - #####, h5
-  - ######, h6
+- #, h1
+- ##, h2
+- ###, h3
+- ####, h4
+- #####, h5
+- ######, h6
 
-  - =====, h1
-  - -----, h2
+- =====, h1
+- -----, h2
 
-- Paragraphs
+### Paragraphs
 
 - Line Breaks
 
-- Bold
+### Bold
 
-  - **Bold**
-  - **BOLD**
+- **Bold**
+- **BOLD**
 
-- Italics
+### Italics
 
-  - _BOLD_
-  - _BOLD_
+- _BOLD_
+- _BOLD_
 
-- Bold And Italics
+### Bold And Italics
 
-  - **_BOLD_**
-  - **_BOLD_**
+- **_BOLD_**
+- **_BOLD_**
 
-- Blockquotes
+### Blockquotes
 
-  - > Blockquote
+- > Blockquote
 
-  - Blockquotes can contain other syntax in the content
+### Ordered List
 
-- Ordered List
+1. List Item 1
+2. List Item 2
 
-  - 1. List Item 1
-  - 2. List Item 2
+### Unordered List
 
-- Unordered List
+- List Item 1
+- List Item 2
 
-  - List Item 1
-  - List Item 2
+### Images
 
-- Images
+- ![Image](http://image.com)
 
-  - ![Image](http://image.com)
+### Code
 
-- Code
+- `markdown`
 
-  - `markdown`
+- ```c
+    function add(){}
+  ```
 
-  - ```c
-      function add(){}
-    ```
+### Horizontal Lines
 
-- Horizontal Lines
+- ***
 
-  - ***
+### Links
 
-- Links
+- [Link](http://link.com)
 
-  - [Link](http://link.com)
-
-## Plan for site
+### Plan for site
 
 - User can upload a file or can paste the markdown directly
+
+#### Cases
+
+- `Hello`
+- Hello `World`
+- `Hello` `World`
+- `Hello World`
+- `Hello World.`

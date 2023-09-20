@@ -5,11 +5,27 @@
 .icon-md {
   width: 48px;
   height: 48px;
+
+  @include respond(phone-sm) {
+    display: none;
+  }
 }
 
 .icon-arrow {
   width: 52px;
   height: 52px;
+
+  @include respond(phone-sm) {
+    display: none;
+  }
+}
+
+/* EXCEPTION */
+.rem-icon-p {
+  position: absolute;
+
+  top: 0%;
+  left: -2%;
 }
 
 .rem-emoji-arrow {
@@ -18,16 +34,11 @@
   font-size: 2rem;
   text-decoration: none;
 
-  position: absolute;
-
   padding: 1rem;
 
   border-radius: 55px;
 
   transition: all 0.2s;
-
-  top: 4%;
-  left: 4%;
 
   &:hover {
     background-color: $white-variant;

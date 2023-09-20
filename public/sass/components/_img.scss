@@ -7,6 +7,10 @@
   gap: 2rem;
 
   margin-bottom: 4rem;
+
+  @include respond(phone-sm) {
+    flex-direction: column;
+  }
 }
 
 .img {
@@ -15,4 +19,8 @@
   max-width: 46%;
 
   padding: 0.4rem;
+
+  @include respond(phone-sm) {
+    max-width: 100%;
+  }
 }

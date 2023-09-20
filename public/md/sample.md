@@ -1,6 +1,6 @@
 Markdown is a lightweight markup language for creating formatted text using a plain-text editor.
 
-# Heading Level 1
+# Heading `Level` 1
 
 ## Heading Level 2
 
@@ -12,13 +12,13 @@ Markdown is a lightweight markup language for creating formatted text using a pl
 
 ###### Heading Level 6
 
-_ITALICS_
+This is _ITALICS_ again it is _ITALICS_.
 
-**BOLD STYLE**
+This is **BOLD STYLE** again it is **BOLD STYLE**.
 
-> This is a blockquote.
+This is **_BOLD AND ITALICS_** it is **_BOLD AND ITALICS_**.
 
-`Markdown`
+This is `Markdown` sample `file`.
 
 ```python
 print("Hello World!");

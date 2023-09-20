@@ -10,7 +10,7 @@ body {
   text-transform: capitalize;
   color: $white-variant;
 
-  height: 100vh;
+  // height: 100vh;
 
   background-image: linear-gradient(
     to bottom right,
@@ -25,4 +25,16 @@ body {
   user-select: none;
 
   box-sizing: border-box;
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(phone) {
+    font-size: 50%;
+  }
 }

@@ -1,7 +1,3 @@
-/* INSERT */
-
-/* NOTES - Clear all variable at end. */
-
 const fs = require("fs");
 const readline = require("readline");
 
