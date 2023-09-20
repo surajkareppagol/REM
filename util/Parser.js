@@ -9,7 +9,6 @@ let tagType = "none";
 let tagValue = "";
 let isCodeFence = false;
 let codeFence = "";
-let intermediateText = "";
 
 /**************************************/
 /* MAIN UTILS */
@@ -34,7 +33,7 @@ function getBoldAndItalics(line) {
   if (symbol === "**" || symbol === "__") {
     return getTagAndValue(
       line,
-      "*",
+      `${symbol == "**" ? "*" : "_"}`,
       '<strong class="rem-strong">',
       "</strong>",
       2
@@ -44,7 +43,7 @@ function getBoldAndItalics(line) {
   if (symbol === "***" || symbol === "___") {
     return getTagAndValue(
       line,
-      "_",
+      `${symbol == "***" ? "*" : "_"}`,
       '<strong class="rem-strong"><em class="rem-em">',
       "</em></strong>",
       3
@@ -54,7 +53,7 @@ function getBoldAndItalics(line) {
 
 function getHeading(line) {
   const poundSymbols = line.split("#").length - 1;
-  intermediateText = line.slice(poundSymbols + 1);
+  let intermediateText = line.slice(poundSymbols + 1);
 
   while (1) {
     tagType = getTagType(intermediateText);
@@ -76,7 +75,33 @@ function getImage(line) {
 }
 
 function getLink(line) {
-  intermediateText = line.slice(line.indexOf("[") + 1, line.indexOf("]"));
+  let isOpeningText = false;
+  let isOpeningLink = false;
+  let link = "";
+  let linkText = "";
+  let intermediateText = "";
+
+  for (const letter of line.split("")) {
+    if (letter === "[") {
+      isOpeningText = true;
+    } else if (letter === "]") {
+      isOpeningText = false;
+    } else if (isOpeningText) {
+      linkText += letter;
+    } else if (letter === "(") {
+      isOpeningLink = true;
+    } else if (letter === ")") {
+      isOpeningLink == false;
+      intermediateText += `<a class="rem-a" href="${link}">${linkText}</a>`;
+      link = "";
+      linkText = "";
+    } else if (isOpeningLink) {
+      link += letter;
+    } else {
+      intermediateText += letter;
+    }
+  }
+
   while (1) {
     tagType = getTagType(intermediateText);
 
@@ -86,10 +111,7 @@ function getLink(line) {
     else break;
   }
 
-  return `<a class="rem-a" href="${line.slice(
-    line.indexOf("(") + 1,
-    line.indexOf(")")
-  )}">${intermediateText}</a>`;
+  return intermediateText;
 }
 
 function getBlockQuote(line) {
@@ -112,21 +134,25 @@ function getCodeFence() {
 }
 
 function getParagraph(line) {
+  let intermediateText = "";
+
   if (isCodeFence) {
     codeFence += `${line}\n`;
     return;
   }
 
+  intermediateText = line;
   while (1) {
     tagType = getTagType(intermediateText);
 
     if (tagType === "code") intermediateText = getCode(intermediateText);
     else if (tagType === "bold_italic")
       intermediateText = getBoldAndItalics(intermediateText);
+    else if (tagType === "link") intermediateText = getLink(intermediateText);
     else break;
   }
 
-  return `<p class="rem-p">${line}</p>`;
+  return `<p class="rem-p">${intermediateText}</p>`;
 }
 
 /**************************************/
@@ -178,8 +204,8 @@ function getTagType(line) {
   if (line.includes("#")) return "heading";
   else if (line && line.includes("```")) return "code_fence";
   else if (line.includes("`")) return "code";
-  else if (line.includes("*") || line.includes("_")) return "bold_italic";
-  else if (line && line.includes(">")) return "blockquote";
+  else if (line && line.includes(">") && !line.includes("</"))
+    return "blockquote";
   else if (line && (line.includes("---") || line.includes("***")))
     return "horizontal_line";
   else if (
@@ -196,6 +222,7 @@ function getTagType(line) {
     line.includes("!")
   )
     return "image";
+  else if (line.includes("*") || line.includes("_")) return "bold_italic";
   else if (line) return "paragraph";
   else if (!line) return "blank";
   else return "none";
@@ -213,21 +240,19 @@ function getHTML(line) {
       return getHeading(line);
 
     case "code_fence":
-      return getCodeFence(line);
+      return getCodeFence();
 
     case "code":
-      tagValue = getCode(line);
-      return `<p class="rem-p">${tagValue}</p>`;
+      return getParagraph(line);
 
     case "bold_italic":
-      tagValue = getBoldAndItalics(line);
-      return `<p class="rem-p">${tagValue}</p>`;
+      return getParagraph(line);
 
     case "horizontal_line":
       return `<hr/>`;
 
     case "link":
-      return getLink(line);
+      return getParagraph(line);
 
     case "image":
       return getImage(line);
